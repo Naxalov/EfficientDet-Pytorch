@@ -1,1 +1,1 @@
-docker run --rm --shm-size 50G --runtime=nvidia -v $(pwd):'/github' -it ultralytics/yolov5 bash
+docker run --rm --shm-size 50G --runtime=nvidia -v 'Yet-Another-EfficientDet-Pytorch':'/github' -it ultralytics/yolov5 bash
