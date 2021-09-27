@@ -16,9 +16,12 @@ parser.add_argument('--weight_file', type=str, default='', help='model.pth')
 
 args = parser.parse_args()
 
+img_path = args.img_path #'datasets/logo/val/208.jpg'
+weight_file = args.weight_file #'efficientdet-d0_5_100.pth'
+
+
 compound_coef = 0
 force_input_size = None  # set None to use default size
-img_path = args.img_path #'datasets/logo/val/208.jpg'
 
 threshold = 0.2
 iou_threshold = 0.2
@@ -47,7 +50,6 @@ model = EfficientDetBackbone(compound_coef=compound_coef, num_classes=len(obj_li
                              # replace this part with your project's anchor config
                              ratios=[(1.0, 1.0), (1.3, 0.8), (1.9, 0.5)],
                              scales=[2 ** 0, 2 ** (1.0 / 3.0), 2 ** (2.0 / 3.0)])
-# weight_file = 'efficientdet-d0_5_100.pth'
 model.load_state_dict(torch.load('logs/logo/'+weight_file))
 model.requires_grad_(False)
 model.eval()
