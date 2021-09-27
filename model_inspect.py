@@ -31,7 +31,8 @@ use_float16 = False
 cudnn.fastest = True
 cudnn.benchmark = True
 
-obj_list = [ 'adidas0', 'chanel','gucci','hh','lacoste','mk','nike','prada','puma','supreme' ]
+# obj_list = [ 'adidas0', 'chanel','gucci','hh','lacoste','mk','nike','prada','puma','supreme' ]
+obj_list = ['potholes','pothole']
 
 # tf bilinear interpolation is different from any other's, just make do
 input_sizes = [512, 640, 768, 896, 1024, 1280, 1280, 1536]
