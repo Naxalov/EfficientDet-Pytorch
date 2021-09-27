@@ -14,9 +14,11 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--img_path', type=str, default='None', help='initial image path')
 parser.add_argument('--weight_file', type=str, default='', help='model.pth')
 
+args = parser.parse_args()
+
 compound_coef = 0
 force_input_size = None  # set None to use default size
-# img_path = 'datasets/logo/val/208.jpg'
+img_path = args.img_path #'datasets/logo/val/208.jpg'
 
 threshold = 0.2
 iou_threshold = 0.2
