@@ -50,7 +50,7 @@ model = EfficientDetBackbone(compound_coef=compound_coef, num_classes=len(obj_li
                              # replace this part with your project's anchor config
                              ratios=[(1.0, 1.0), (1.3, 0.8), (1.9, 0.5)],
                              scales=[2 ** 0, 2 ** (1.0 / 3.0), 2 ** (2.0 / 3.0)])
-model.load_state_dict(torch.load('logs/logo/'+weight_file))
+model.load_state_dict(torch.load('logs/'+weight_file))
 model.requires_grad_(False)
 model.eval()
 
