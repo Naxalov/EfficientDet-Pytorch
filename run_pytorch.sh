@@ -1,1 +1,2 @@
-docker run --rm --shm-size 50G --runtime=nvidia -it -p 8888:8888 -v $(pwd)/Yet-Another-EfficientDet-Pytorch:'/github' ultralytics/yolov5 bash
+#shared memory size either with --ipc=host or --shm-size command line options
+docker run --rm --ipc=host --runtime=nvidia -it -p 8888:8888 -v $(pwd)/Yet-Another-EfficientDet-Pytorch:'/github' ultralytics/yolov5 bash
