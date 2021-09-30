@@ -11,7 +11,7 @@ from utils.utils import preprocess, invert_affine, postprocess
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_arguent('--img_path', type=str, default='None', help='initial image path')
+parser.add_argument('--img_path', type=str, default='None', help='initial image path')
 parser.add_argument('--weight_file', type=str, default='', help='model.pth')
 
 args = parser.parse_args()
